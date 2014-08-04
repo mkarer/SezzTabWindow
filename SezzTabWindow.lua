@@ -315,8 +315,6 @@ function SezzTabWindow:AddTab(strText, strIcon, strKey)
 		Movable = 0,
 		Sizable = 0,
 		Border = 0,
-		Picture = 1,
-		Sprite = "BasicSprites:WhiteFill",
 		LAnchorPoint = 0, TAnchorPoint = 0, RAnchorPoint = 1, BAnchorPoint = 1,
 		LAnchorOffset = knBorderSize, TAnchorOffset = knBorderSize + knTabHeight + knTabButtomLineHeight, RAnchorOffset = -knBorderSize, BAnchorOffset = -knBorderSize,
 		Visible = 0,
