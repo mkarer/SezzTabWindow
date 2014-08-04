@@ -368,6 +368,14 @@ function SezzTabWindow:OnTabMouseUp(wndHandler, wndControl, eMouseButton)
 end
 
 -----------------------------------------------------------------------------
+-- Tab Window Properties/Methods
+-----------------------------------------------------------------------------
+
+function SezzTabWindow:IsValid()
+	return self.wndMain and self.wndMain:IsValid();
+end
+
+-----------------------------------------------------------------------------
 -- Tab Properties/Methods
 -----------------------------------------------------------------------------
 
