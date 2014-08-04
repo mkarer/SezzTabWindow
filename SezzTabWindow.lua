@@ -234,19 +234,23 @@ function SezzTabWindow:Show()
 	return self;
 end
 
+function SezzTabWindow:Destroy()
+	for strKey, tTab in pairs(self.tTabs) do
+		self.tTabs[strKey] = false;
+	end
+
+	self.strActiveTab = nil;
+	self.wndMain:Destroy();
+	self.wndMain = nil;
+	self.bRendered = false;
+end
+
 function SezzTabWindow:Close()
 	self.wndMain:Show(false, true);
 	self:Fire("WindowClosed");
 
 	if (self.bDestroyOnClose) then
-		for strKey, tTab in pairs(self.tTabs) do
-			self.tTabs[strKey] = false;
-		end
-
-		self.strActiveTab = nil;
-		self.wndMain:Destroy();
-		self.wndMain = nil;
-		self.bRendered = false;
+		self:Destroy();
 	else
 		self.wndMain:Enable(false);
 	end
