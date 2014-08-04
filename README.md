@@ -1,0 +1,7 @@
+SezzTabWindow
+===============
+
+WildStar Flat Tab Window Control
+
+# DO NOT USE THIS - IT MAY CONTAIN HARDCODED STUFF FOR TESTING
+# THERE WILL BE A DOCUMENTATION WHEN IT'S READY
