@@ -324,6 +324,10 @@ function SezzTabWindow:AddTab(strText, strIcon, strKey)
 		Visible = 0,
 	});
 
+	if (not self.strActiveTab) then
+		self.strActiveTab = strKey;
+	end
+
 	-- Done
 	tinsert(self.tXml[1], tXmlTab);
 	self.tTabs[strKey] = false;
@@ -421,7 +425,7 @@ end
 function SezzTabWindow:GetTabContainer(strKey)
 	if (not self.tTabs[strKey]) then return; end
 
-	return self.tTabs[strKey].wndControl;
+	return self.tTabs[strKey].wndContainer;
 end
 
 -----------------------------------------------------------------------------
