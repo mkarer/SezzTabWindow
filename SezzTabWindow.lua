@@ -76,7 +76,8 @@ local tXmlTabWindowAttributes = {
 	Picture = 1,
 	Border = 0,
 --	Template = "Default",
-	IgnoreMouse = 1,
+	SwallowMouseClicks = 1,
+	IgnoreMouse = 0,
 	-- Events
 	{ __XmlNode = "Event", Name = "WindowClosed", Function = "Close" },
 --	{ __XmlNode = "Event", Name = "WindowKeyEscape", Function = "Close" },
